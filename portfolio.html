@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Portfolio | Aditi Ghalsasi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="site-title">Aditi Ghalsasi</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="writings.html">Writings</a>
+        <a href="portfolio.html">Shadow Portfolio</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <h1 class="page-title">Shadow Portfolio</h1>
+      <p class="page-subtitle">
+        Not investments; just a curated set of companies that reflect how I think about wedge, product, and long-term
+        compounding in techbio.
+      </p>
+      <p class="section-intro">
+        This is intentionally a “shadow” portfolio: companies I track closely because they represent themes I’m
+        excited about in mRNA and delivery, women’s health, tools and diagnostics, and data-native therapeutics. None of
+        this is investment advice or a prediction; it’s a living record of what I find compelling and why.
+      </p>
+
+      <div class="cards">
+        <!-- COMPANY TEMPLATE:
+        Replace Company A, sector, and the paragraph with your own picks when you're ready.
+        Try to include: what they do (in your words), what's special, and what has to go right.
+        -->
+
+        <article class="card">
+          <div class="card-title">Company A</div>
+          <div class="card-meta">Techbio · Seed / Series A</div>
+          <p>
+            One sentence on what they do in your own words, and one sentence on why you find this compelling
+            (e.g., platform leverage, data advantage, unusual team).
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">Company B</div>
+          <div class="card-meta">Women’s health · Platform / infra</div>
+          <p>
+            Focus on their wedge into women’s health infrastructure, the quality of the evidence base, and how their
+            product might evolve into a category-defining platform.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">Company C</div>
+          <div class="card-meta">Tools &amp; Diagnostics · Early</div>
+          <p>
+            Describe how the tool fits into existing workflows, what makes it hard to rip out once adopted, and where
+            value is likely to accrue in the stack.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">Company D</div>
+          <div class="card-meta">AI x Biology · Series A+</div>
+          <p>
+            Capture your view on whether their “AI” is truly a differentiated engine or more of an enabling layer, and
+            what that implies for margin and defensibility.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">Company E</div>
+          <div class="card-meta">Data &amp; Infrastructure · Growth</div>
+          <p>
+            Use this slot for a less-sexy but critical infra play: how it unlocks better decision-making and how it
+            might become part of the default stack.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">Company F</div>
+          <div class="card-meta">Wildcard</div>
+          <p>
+            A company that doesn’t neatly fit the categories above but stretches your thinking; explain why you’re
+            following it despite (or because of) the weirdness.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Aditi Ghalsasi.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
