@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name | VC & Bioengineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ---------- Base styles ---------- */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* ---------- Top navigation ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0 0.5rem;
+    }
+
+    .site-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ---------- Hero section ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .hero-text p.lead {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 1rem;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .hero-links a {
+      display: inline-block;
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 999px;
+      background: #ddd;
+      overflow: hidden;
+      justify-self: center;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    /* ---------- Two-column lists (writings & shadow portfolio) ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1rem;
+      background: white;
+      border-radius: 0.75rem;
+      border: 1px solid #eee;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- Timeline resume ---------- */
+    .timeline {
+      border-left: 2px solid #e0e0e0;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 0.5rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.18rem;
+      top: 0.35rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #111827;
+    }
+
+    .timeline-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline-place {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .timeline-dates {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.15rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 0.25rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      padding: 1.5rem 0 2rem;
+    }
+
+    /* ---------- Responsive tweaks ---------- */
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .hero-photo {
+        order: -1;
+        margin-bottom: 0.5rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Top nav -->
+    <header>
+      <div class="site-title">Your Name</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#writings">Writings</a>
+        <a href="#portfolio">Shadow Portfolio</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Investor & Bioengineering Generalist</h1>
+        <p class="lead">
+          I’m a consultant and aspiring VC focused on techbio, women’s health, and next-generation therapeutics.
+        </p>
+        <div class="hero-meta">
+          Currently: Analyst @ DeciBio · based in Boston / LA (flexible)
+        </div>
+        <div class="hero-links" style="margin-top: 0.75rem;">
+          <a href="mailto:youremail@example.com">Email</a> ·
+          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> ·
+          <a href="https://substack.com" target="_blank">Substack</a> ·
+          <a href="#timeline">Résumé</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <!-- Replace profile.jpg with your own image (upload under /images) -->
+        <!-- If you don't have one yet, you can just remove the <img> tag. -->
+        <img src="images/profile.jpg" alt="Your name portrait" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p class="section-intro">
+        Short, human intro about who you are, how you think about investing, and what threads tie your work together.
+      </p>
+      <p>
+        I trained at the intersection of bioengineering and business, working across mRNA, LNPs, and precision
+        medicine platforms before moving into strategy consulting. I’m especially interested in platforms that compound:
+        tools that make biology more programmable, women’s health infrastructure, and data-native therapeutics.
+      </p>
+      <p>
+        This site is a living snapshot of what I’m curious about: what I write, the companies I track, and how I’ve
+        spent my time so far.
+      </p>
+    </section>
+
+    <!-- Writings -->
+    <section id="writings">
+      <h2>Writings</h2>
+      <p class="section-intro">
+        Selected pieces that reflect how I think about techbio, platforms, and company-building.
+      </p>
+      <div class="cards">
+        <!-- Duplicate / edit these cards with your actual posts -->
+        <article class="card">
+          <div class="card-title">
+            <a href="#" target="_blank">Title of a core thesis post</a>
+          </div>
+          <div class="card-meta">Substack · 2025</div>
+          <p>
+            One-line summary of the core idea or question you explored in this piece.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">
+            <a href="#" target="_blank">Another essay or memo</a>
+          </div>
+          <div class="card-meta">Blog · 2024</div>
+          <p>
+            One-line summary focusing on how you evaluate markets, tech risk, or GTM.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-title">
+            <a href="#" target="_blank">Guest post / publication</a>
+          </div>
+          <div class="card-meta">Publication · 2023</div>
+          <p>
+            Brief context on why this matters for your investing lens.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Shadow portfolio -->
+    <section id="portfolio">
+      <h2>Shadow Portfolio</h2>
+      <p class="section-intro">
+        A sampling of companies I track closely &mdash; not investments, but signals of the types of teams and theses I’d love to back.
+      </p>
+      <div class="cards">
+        <!-- Company 1 -->
+        <article class="card">
+          <div class="card-title">Company A</div>
+          <div class="card-meta">Techbio · Seed / Series A</div>
+          <p>
+            One sentence on what they do (in your words), and one sentence on why you find this compelling
+            (market, moat, team, product, etc.).
+          </p>
+        </article>
+
+        <!-- Company 2 -->
+        <article class="card">
+          <div class="card-title">Company B</div>
+          <div class="card-meta">Women’s health · Infra / platform</div>
+          <p>
+            Focus on how you think about their wedge, distribution, and long-term upside.
+          </p>
+        </article>
+
+        <!-- Company 3 -->
+        <article class="card">
+          <div class="card-title">Company C</div>
+          <div class="card-meta">Tools &amp; Diagnostics</div>
+          <p>
+            Briefly articulate your mental model of what would have to be true for this to be a breakout.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Timeline résumé -->
+    <section id="timeline">
+      <h2>Timeline</h2>
+      <p class="section-intro">
+        A quick, high-level view of where I’ve spent my time.
+      </p>
+
+      <div class="timeline">
+        <!-- Latest role -->
+        <div class="timeline-item">
+          <div class="timeline-role">Analyst</div>
+          <div class="timeline-place">DeciBio Consulting</div>
+          <div class="timeline-dates">2024 &ndash; Present</div>
+          <div class="timeline-desc">
+            Strategy and market work across mRNA / LNP, in vivo therapeutics, and diagnostics; focused on vendor maps,
+            customer journeys, and where new platforms can wedge into existing workflows.
+          </div>
+        </div>
+
+        <!-- Previous role -->
+        <div class="timeline-item">
+          <div class="timeline-role">Bioengineering &amp; Business, M&amp;T</div>
+          <div class="timeline-place">University of Pennsylvania</div>
+          <div class="timeline-dates">2019 &ndash; 2023</div>
+          <div class="timeline-desc">
+            Dual training in bioengineering and finance; research in LNP delivery and maternal health; internships in
+            biotech strategy and product.
+          </div>
+        </div>
+
+        <!-- Add more items as needed -->
+        <div class="timeline-item">
+          <div class="timeline-role">LNP Research</div>
+          <div class="timeline-place">Mitchell Lab &amp; collaborators</div>
+          <div class="timeline-dates">2020 &ndash; 2022</div>
+          <div class="timeline-desc">
+            Worked on LNP platforms adjacent to work from Langer / Anderson labs, with applications in maternal
+            health; contributed to publications and developed an interest in translational platforms.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-intro">
+        I’m always happy to connect with founders, scientists, and other weirdos thinking about the future of biology.
+      </p>
+      <p>
+        The best way to reach me is via <a href="mailto:youremail@example.com">email</a> or
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>.  
+        You can also find my longer-form writing on
+        <a href="https://substack.com" target="_blank">Substack</a>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Your Name. Shadow portfolio is for learning only &mdash; not investment advice.
+    </footer>
+  </div>
+
+  <script>
+    // Simple script to keep the year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
